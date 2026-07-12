@@ -177,7 +177,7 @@
                 return;
             }
 
-            let number = "+12568212395";
+            let number = "+2349021898669";
             let message = `Hello, I have made a deposit. Here are my details:\n\n` +
                           `Amount: ₦${depositAmount}\n` +
                           `Bank: ${selectedAccount.bank}\n` +
@@ -186,7 +186,7 @@
                           `Please verify my payment.`;
 
             let encodedMessage = encodeURIComponent(message);
-            let whatsappURL = `https://wa.me/${number}?text=${encodedMessage}`;
+            let whatsappURL = `https://t.me/${number}?text=${encodedMessage}`;
 
             window.open(whatsappURL, "_blank");
 
