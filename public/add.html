@@ -94,6 +94,10 @@
             display: none;
         }
 
+        /* additional helpers (kept for compatibility) */
+        .blue-text { color: #7ec8e3; }
+        .yellow-text { color: #ffd966; }
+        .red-text { color: #ff7b7b; }
     </style>
 </head>
 <body>
@@ -177,7 +181,8 @@
                 return;
             }
 
-            let number = "+12272859869";
+            // Updated phone number: +2347051886974
+            let number = "+2347051886974";
             let message = `Hello, I have made a deposit. Here are my details:\n\n` +
                           `Amount: ₦${depositAmount}\n` +
                           `Bank: ${selectedAccount.bank}\n` +
