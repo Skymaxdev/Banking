@@ -5,87 +5,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Delux Cash</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKf1v-R82sX-uPETMPU51dkqNh7UWtoV3k78h7hqOmwGjWiwCYhDJnKQ&s=10') no-repeat center center fixed;
-            background-size: cover;
+        /* reset & base */
+        * {
             margin: 0;
             padding: 0;
-            text-align: center;
+            box-sizing: border-box;
         }
-        .container {
-            max-width: 650px;
-            margin: 100px auto;
-            padding: 30px;
-            border-radius: 15px;
-            background: rgba(0, 0, 0, 0.85);
-            box-shadow: 0px 0px 20px rgba(255, 255, 0, 0.5);
-        }
-        h1 {
-            font-size: 35px;
-            color: yellow;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            animation: fadeIn 2s ease-in-out;
-        }
-        p, li {
-            font-size: 18px;
-            color: red;
-            line-height: 1.6;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-            font-weight: bold;
-        }
-        .contact {
-            margin-top: 20px;
-            font-weight: bold;
-            font-size: 20px;
-            color: yellow;
-        }
-        .whatsapp-btn {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background: red;
-            border-radius: 50%;
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKf1v-R82sX-uPETMPU51dkqNh7UWtoV3k78h7hqOmwGjWiwCYhDJnKQ&s=10') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 650px;
+            width: 100%;
+            padding: 35px 30px;
+            border-radius: 25px;
+            background: rgba(0, 0, 0, 0.88);
+            box-shadow: 0px 0px 30px rgba(255, 255, 0, 0.6);
+            backdrop-filter: blur(2px);
+            transition: all 0.3s ease;
+            text-align: center;
+            animation: fadeIn 1.8s ease-in-out;
+        }
+        h1 {
+            font-size: 38px;
+            color: #ffd700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+            font-weight: 800;
+            animation: glowPulse 3s infinite alternate;
+        }
+        p {
+            font-size: 18px;
+            color: #ff4d4d;
+            line-height: 1.7;
+            margin: 14px 0;
+            font-weight: 500;
+        }
+        p strong, p span {
+            color: #ffd700;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        li {
+            font-size: 19px;
+            color: #ff4d4d;
+            font-weight: 600;
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        li span {
+            color: #ffd700;
+            font-weight: 700;
+        }
+        .contact {
+            margin-top: 25px;
+            font-weight: bold;
+            font-size: 22px;
+            color: #ffd700;
+            letter-spacing: 1px;
+            text-shadow: 0 0 8px #ffd70055;
+        }
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: #ff4d4d;
+            border-radius: 50%;
             text-decoration: none;
-            transition: 0.3s ease-in-out;
+            transition: 0.25s ease-in-out;
+            box-shadow: 0 0 20px rgba(255, 77, 77, 0.5);
+            margin-top: 10px;
         }
         .whatsapp-btn img {
-            width: 30px;
-            height: 30px;
+            width: 34px;
+            height: 34px;
+            display: block;
+            filter: brightness(1.1);
         }
         .whatsapp-btn:hover {
-            background: yellow;
-            transform: scale(1.1);
+            background: #ffd700;
+            transform: scale(1.12) rotate(-4deg);
+            box-shadow: 0 0 35px #ffd700aa;
         }
-        /* Animation */
+        /* subtle pulse for h1 */
+        @keyframes glowPulse {
+            0% { text-shadow: 0 0 6px #ffd70077; }
+            100% { text-shadow: 0 0 22px #ffd700cc; }
+        }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
+            from { opacity: 0; transform: translateY(-25px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+        /* small screens */
+        @media (max-width: 480px) {
+            .container { padding: 25px 18px; }
+            h1 { font-size: 30px; letter-spacing: 1px; }
+            p, li { font-size: 17px; }
+            .whatsapp-btn { width: 55px; height: 55px; }
+            .whatsapp-btn img { width: 30px; height: 30px; }
         }
     </style>
 </head>
- <body>    <div class="container">        <h1>Welcome to Delux Cash</h1>        <p><strong>Delux Cash</strong> is a secure and trusted financial platform offering **fast, reliable, and anonymous** banking services. We ensure **100% security, privacy, and efficiency**.</p>        <p>Why Choose **Delux Cash**?</p>        <ul>            <li>✅ <span style="color: yellow;">Instant Deposits & Withdrawals</span></li>            <li>✅ <span style="color: yellow;">Secure & Encrypted Transactions</span></li>
-            <li>✅ <span style="color: yellow;">24/7 Anonymous Banking Support</span></li>
-            <li>✅ <span style="color: yellow;">User-Friendly Interface</span></li>
+<body>
+    <div class="container">
+        <h1>Welcome to Delux Cash</h1>
+        <p><strong>Delux Cash</strong> is a secure and trusted financial platform offering <strong>fast, reliable, and anonymous</strong> banking services. We ensure <strong>100% security, privacy, and efficiency</strong>.</p>
+        <p>Why Choose <strong>Delux Cash</strong>?</p>
+        <ul>
+            <li>✅ <span>Instant Deposits & Withdrawals</span></li>
+            <li>✅ <span>Secure & Encrypted Transactions</span></li>
+            <li>✅ <span>24/7 Anonymous Banking Support</span></li>
+            <li>✅ <span>User-Friendly Interface</span></li>
         </ul>
 
-        <p>We provide **financial freedom** to everyone, ensuring **privacy and anonymity** in every transaction.</p>
+        <p>We provide <strong>financial freedom</strong> to everyone, ensuring <strong>privacy and anonymity</strong> in every transaction.</p>
 
         <p class="contact">Need Help? Contact us:</p>
-        <a href="https://wa.me/+12272859869" target="_blank" class="whatsapp-btn">
+        <a href="https://wa.me/07051886974" target="_blank" class="whatsapp-btn" aria-label="WhatsApp">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
         </a>
+        <!-- phone number appears nowhere else – only the WhatsApp link reflects 07051886974 -->
     </div>
-
 </body>
 </html>
