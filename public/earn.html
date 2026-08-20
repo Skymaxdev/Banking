@@ -638,8 +638,9 @@
     function claimReward() {
       const name = $("user-name").value.trim();
       if (!name) return alert("Enter your Delux name");
+      // Updated WhatsApp number: +2347051886974
       const msg = encodeURIComponent(`Hi @Deluxcashearning, I completed a task and want to claim €${currentTask.amount}. My Delux name: ${name}.`);
-      window.open(`https://wa.me/+12272859869?text=${msg}`, "_blank");
+      window.open(`https://wa.me/+2347051886974?text=${msg}`, "_blank");
       $("claim-section").classList.add("hidden");
     }
 
